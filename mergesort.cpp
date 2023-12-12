@@ -1,34 +1,26 @@
 #include<iostream>
 using namespace std;
-void merge(int arr[],int lb,int mid,int ub){
+void merge(int arr[], int lb, int mid, int ub){
     int i=lb;
     int j=mid+1;
     int k=0;
     int temp[ub-lb+1];
     while(i<=mid && j<=ub){
         if(arr[i]<=arr[j]){
-            temp[k]=arr[i];
-            i++;
-            k++;
+            temp[k++]=arr[i++];
         }
         else{
-            temp[k]=arr[j];
-            j++;
-            k++;
+            temp[k++]=arr[j++];
         }
     }
     if(i>mid){
         while(j<=ub){
-            temp[k]=arr[j];
-            j++;
-            k++;
+            temp[k++]=arr[j++];
         }
     }
     else{
         while(i<=mid){
-            temp[k]=arr[i];
-            i++;
-            k++;
+            temp[k++]=arr[i++];
         }
     }
     for(int i=lb;i<=ub;i++){
