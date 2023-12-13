@@ -116,6 +116,7 @@ public:
 
             if (ds.findUPar(u) != ds.findUPar(v)) {
                 mstWt += wt;                //adding wt of the edge if they don't belong to same set having same parent
+                cout<<u <<"-"<< v<<endl;
                 ds.unionBySize(u, v);
             }
         }
@@ -126,7 +127,7 @@ public:
 
 int main() {
 
-    int V = 9;
+    int V = 5;
     vector<vector<int>> edges = {{0, 1, 2}, {0, 2, 1}, {1, 2, 1}, {2, 3, 2}, {3, 4, 1}, {4, 2, 2}};
    
     vector<vector<int>> adj[V];
