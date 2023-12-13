@@ -1,83 +1,84 @@
-// What is Heap?
-// => Heap is a complete binary tree that comes with a heap order property
-// What is CBT?
-// => Every level is completely filled except the last level
-// =>Nodes always added from the left .
+/*
+What is Heap?
+=> Heap is a complete binary tree that comes with a heap order property
+What is CBT?
+=> Every level is completely filled except the last level
+=>Nodes always added from the left .
 
-//         0
-//     /  \ 
-//     1    2
-//     / \
-//     3   4
+        0
+    /  \ 
+    1    2
+    / \
+    3   4
 
-//     Heap Order property
-//     ________|_________
-//     |                 |
-// Max Heap        Min Heap
-//     (60)             (30)
-//     /    \            /   \
-// (50)     (40)     (40)   (50)
-// /  \              /   
-// (30) (20)        (60)
+    Heap Order property
+    ________|_________
+    |                 |
+Max Heap        Min Heap
+    (60)             (30)
+    /    \            /   \
+(50)     (40)     (40)   (50)
+/  \              /   
+(30) (20)        (60)
 
-//     _______________________________
-// | x  | 60 | 50 | 40 | 30 | 20 | 
+    _______________________________
+| x  | 60 | 50 | 40 | 30 | 20 | 
 
-// Node = i th index
-// left child = 2*i index
-// right child= 2*i + 1 index
-// parent = (i/2)
-
-
-//          Deletion
-// ---------------------------
-//      R         Step 1 : Swap(put) root node with last node
-//     (55)       --------
-//     /  \      Del R          (52)
-//   (54)  (53)    =>           /   \
-//   /  \                     (54)   (53)
-// (50) (52)                  /  \
-//                          (50) (52)
-
-//         step 2 : Remove last node
-//                      R
-//                     (52)
-//                     /  \
-//                   (54)  (53)
-//                   /  
-//                (50)  
-
-//         step 3 : Propagate root node to its correct position
+Node = i th index
+left child = 2*i index
+right child= 2*i + 1 index
+parent = (i/2)
 
 
-//         Heapify algorithm
-// -----------------------------------
+         Deletion
+---------------------------
+     R         Step 1 : Swap(put) root node with last node
+    (55)       --------
+    /  \      Del R          (52)
+  (54)  (53)    =>           /   \
+  /  \                     (54)   (53)
+(50) (52)                  /  \
+                         (50) (52)
 
-//             Heap Sort
-// ---------------------------------------
-// Algo =>  while(heapsize>1)
-//              1. swap a[1] (root) -> a[n] (last node)
-//              2. root node -> coorect position
+        step 2 : Remove last node
+                     R
+                    (52)
+                    /  \
+                  (54)  (53)
+                  /  
+               (50)  
 
-//              {70 , 60 , 55 , 45 , 50}
-// max-heap
+        step 3 : Propagate root node to its correct position
 
-//       (70)                 (50)               (60)  
-//       /   \                /   \             /    \
-//     (60)   (55)  =>     (60)   (55)  =>    (50)    (55)
-//     /   \               /  \                /
-//    (45) (50)          (45)  (70)           (45)
 
-//                 {60, 50 , 55 , 45 | 70}   size-- // 70 deleted
-//                                           size=4
-//                 {45 , 50 , 55 | 60 , 70}  size-- // 60 deleted
-//                                           size=3
-//                 {45 , 50 | 55 , 60 , 70}  size-- // 55 deleted
-//                                           size=2
-//                 {45 | 50 , 55 , 60 , 70}  size-- //50 deleted
-//                                           size=1                        
-//                  Element is now sorted
+        Heapify algorithm
+-----------------------------------
 
+            Heap Sort
+---------------------------------------
+Algo =>  while(heapsize>1)
+             1. swap a[1] (root) -> a[n] (last node)
+             2. root node -> coorect position
+
+             {70 , 60 , 55 , 45 , 50}
+max-heap
+
+      (70)                 (50)               (60)  
+      /   \                /   \             /    \
+    (60)   (55)  =>     (60)   (55)  =>    (50)    (55)
+    /   \               /  \                /
+   (45) (50)          (45)  (70)           (45)
+
+                {60, 50 , 55 , 45 | 70}   size-- // 70 deleted
+                                          size=4
+                {45 , 50 , 55 | 60 , 70}  size-- // 60 deleted
+                                          size=3
+                {45 , 50 | 55 , 60 , 70}  size-- // 55 deleted
+                                          size=2
+                {45 | 50 , 55 , 60 , 70}  size-- //50 deleted
+                                          size=1                        
+                 Element is now sorted
+*/
 
                     
 
